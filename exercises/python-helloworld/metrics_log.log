@@ -1,0 +1,194 @@
+ERROR:app:Exception on /metrics [GET]
+Traceback (most recent call last):
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 20, in metrics
+    logging.basicConfig(filename='metrics_log.log', encoding='UFT-8', level=logging.DEBUG)
+  File "/Users/jaiste/anaconda3/lib/python3.8/logging/__init__.py", line 1997, in basicConfig
+    raise ValueError('Unrecognised argument(s): %s' % keys)
+ValueError: Unrecognised argument(s): encoding
+INFO:werkzeug:127.0.0.1 - - [18/Jul/2021 23:15:32] "[35m[1mGET /metrics HTTP/1.1[0m" 500 -
+ERROR:app:Exception on /metrics [GET]
+Traceback (most recent call last):
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 20, in metrics
+    logging.basicConfig(filename='metrics_log.log', encoding='UFT-8', level=logging.DEBUG, datefmt='%Y-%m-%d %H:%M:%S')
+  File "/Users/jaiste/anaconda3/lib/python3.8/logging/__init__.py", line 1997, in basicConfig
+    raise ValueError('Unrecognised argument(s): %s' % keys)
+ValueError: Unrecognised argument(s): encoding
+INFO:werkzeug:127.0.0.1 - - [18/Jul/2021 23:16:51] "[35m[1mGET /metrics HTTP/1.1[0m" 500 -
+ERROR:app:Exception on /metrics [GET]
+Traceback (most recent call last):
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 22, in metrics
+    logging.debug("metrics called" + datetime.timestamp(now) )
+TypeError: can only concatenate str (not "float") to str
+INFO:werkzeug:127.0.0.1 - - [18/Jul/2021 23:16:51] "[35m[1mGET /metrics HTTP/1.1[0m" 500 -
+ERROR:app:Exception on /metrics [GET]
+Traceback (most recent call last):
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 22, in metrics
+    logging.debug("metrics called" + datetime.timestamp(now) )
+TypeError: can only concatenate str (not "float") to str
+INFO:werkzeug:127.0.0.1 - - [18/Jul/2021 23:16:52] "[35m[1mGET /metrics HTTP/1.1[0m" 500 -
+ERROR:app:Exception on /metrics [GET]
+Traceback (most recent call last):
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 20, in metrics
+    logging.basicConfig(filename='metrics_log.log', encoding='UFT-8', level=logging.DEBUG, datefmt='%Y-%m-%d %H:%M:%S')
+  File "/Users/jaiste/anaconda3/lib/python3.8/logging/__init__.py", line 1997, in basicConfig
+    raise ValueError('Unrecognised argument(s): %s' % keys)
+ValueError: Unrecognised argument(s): encoding
+INFO:werkzeug:127.0.0.1 - - [18/Jul/2021 23:17:22] "[35m[1mGET /metrics HTTP/1.1[0m" 500 -
+2021-07-18 23:18:08 ERROR    Exception on /metrics [GET]
+Traceback (most recent call last):
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 20, in metrics
+    logging.basicConfig(
+  File "/Users/jaiste/anaconda3/lib/python3.8/logging/__init__.py", line 1997, in basicConfig
+    raise ValueError('Unrecognised argument(s): %s' % keys)
+ValueError: Unrecognised argument(s): encoding
+2021-07-18 23:18:08 INFO     127.0.0.1 - - [18/Jul/2021 23:18:08] "[35m[1mGET /metrics HTTP/1.1[0m" 500 -
+2021-07-18 23:18:09 ERROR    Exception on /metrics [GET]
+Traceback (most recent call last):
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 28, in metrics
+    logging.debug("metrics called" + datetime.timestamp(now).__str__ )
+TypeError: can only concatenate str (not "method-wrapper") to str
+2021-07-18 23:18:09 INFO     127.0.0.1 - - [18/Jul/2021 23:18:09] "[35m[1mGET /metrics HTTP/1.1[0m" 500 -
+2021-07-18 23:18:09 ERROR    Exception on /metrics [GET]
+Traceback (most recent call last):
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 28, in metrics
+    logging.debug("metrics called" + datetime.timestamp(now).__str__ )
+TypeError: can only concatenate str (not "method-wrapper") to str
+2021-07-18 23:18:09 INFO     127.0.0.1 - - [18/Jul/2021 23:18:09] "[35m[1mGET /metrics HTTP/1.1[0m" 500 -
+2021-07-18 23:19:01 ERROR    Exception on /metrics [GET]
+Traceback (most recent call last):
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 20, in metrics
+    logging.basicConfig(
+  File "/Users/jaiste/anaconda3/lib/python3.8/logging/__init__.py", line 1997, in basicConfig
+    raise ValueError('Unrecognised argument(s): %s' % keys)
+ValueError: Unrecognised argument(s): encoding
+2021-07-18 23:19:01 INFO     127.0.0.1 - - [18/Jul/2021 23:19:01] "[35m[1mGET /metrics HTTP/1.1[0m" 500 -
+2021-07-18 23:19:03 DEBUG    metrics called1626643143.007081
+2021-07-18 23:19:03 INFO     127.0.0.1 - - [18/Jul/2021 23:19:03] "[37mGET /metrics HTTP/1.1[0m" 200 -
+2021-07-18 23:24:01 ERROR    Exception on /metrics [GET]
+Traceback (most recent call last):
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 29, in metrics
+    logging.basicConfig(
+  File "/Users/jaiste/anaconda3/lib/python3.8/logging/__init__.py", line 1997, in basicConfig
+    raise ValueError('Unrecognised argument(s): %s' % keys)
+ValueError: Unrecognised argument(s): encoding
+2021-07-18 23:24:01 INFO     127.0.0.1 - - [18/Jul/2021 23:24:01] "[35m[1mGET /metrics HTTP/1.1[0m" 500 -
