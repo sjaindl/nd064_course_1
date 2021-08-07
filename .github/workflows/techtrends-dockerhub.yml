@@ -5,8 +5,8 @@ name: TechTrends - Package with Docker
 ## or when a new commit is pushed to the repository
 on: 
   push
-  branches:
-      - 'main'
+    branches:
+        - 'main'
 
 ## List the steps to be executed by the workflow
 jobs:
