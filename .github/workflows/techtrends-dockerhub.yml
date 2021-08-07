@@ -4,7 +4,7 @@ name: TechTrends - Package with Docker
 ## In this case, the workflow is execute on a `push` event,
 ## or when a new commit is pushed to the repository
 on: 
-  push
+  push:
     branches:
         - main
 
