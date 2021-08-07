@@ -42,4 +42,4 @@ jobs:
           file: project/Dockerfile
           platforms: linux/amd64
           push: true
-          tags: sjaindl/techtrends:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/techtrends:latest
