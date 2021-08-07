@@ -1,0 +1,64 @@
+2021-08-07 12:00:35 INFO     127.0.0.1 - - [07/Aug/2021 12:00:35] "[35m[1mGET /12 HTTP/1.1[0m" 500 -
+2021-08-07 12:00:59 ERROR    Exception on /12 [GET]
+Traceback (most recent call last):
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 55, in post
+    logging.basicConfig(
+  File "/Users/jaiste/anaconda3/lib/python3.8/logging/__init__.py", line 1997, in basicConfig
+    raise ValueError('Unrecognised argument(s): %s' % keys)
+ValueError: Unrecognised argument(s): encoding
+2021-08-07 12:00:59 INFO     127.0.0.1 - - [07/Aug/2021 12:00:59] "[35m[1mGET /12 HTTP/1.1[0m" 500 -
+2021-08-07 12:01:00 DEBUG    Article with id "12" does not exist
+2021-08-07 12:01:00 INFO     127.0.0.1 - - [07/Aug/2021 12:01:00] "[33mGET /12 HTTP/1.1[0m" 404 -
+2021-08-07 12:01:00 INFO     127.0.0.1 - - [07/Aug/2021 12:01:00] "[37mGET /static/css/main.css HTTP/1.1[0m" 200 -
+2021-08-07 12:03:33 ERROR    Exception on /12 [GET]
+Traceback (most recent call last):
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 55, in post
+    logging.basicConfig(
+  File "/Users/jaiste/anaconda3/lib/python3.8/logging/__init__.py", line 1997, in basicConfig
+    raise ValueError('Unrecognised argument(s): %s' % keys)
+ValueError: Unrecognised argument(s): encoding
+2021-08-07 12:03:33 INFO     127.0.0.1 - - [07/Aug/2021 12:03:33] "[35m[1mGET /12 HTTP/1.1[0m" 500 -
+2021-08-07 12:03:34 ERROR    Article with id 12 does not exist
+2021-08-07 12:03:34 INFO     127.0.0.1 - - [07/Aug/2021 12:03:34] "[33mGET /12 HTTP/1.1[0m" 404 -
+2021-08-07 12:03:34 INFO     127.0.0.1 - - [07/Aug/2021 12:03:34] "[37mGET /static/css/main.css HTTP/1.1[0m" 200 -
+2021-08-07 12:03:35 INFO     127.0.0.1 - - [07/Aug/2021 12:03:35] "[37mGET / HTTP/1.1[0m" 200 -
+2021-08-07 12:03:36 INFO     127.0.0.1 - - [07/Aug/2021 12:03:36] "[37mGET /static/css/main.css HTTP/1.1[0m" 200 -
+2021-08-07 12:03:36 DEBUG    Article "2020 CNCF Annual Report" retrieved
+2021-08-07 12:03:36 INFO     127.0.0.1 - - [07/Aug/2021 12:03:36] "[37mGET /1 HTTP/1.1[0m" 200 -
+2021-08-07 12:03:37 INFO     127.0.0.1 - - [07/Aug/2021 12:03:37] "[37mGET /static/css/main.css HTTP/1.1[0m" 200 -
+2021-08-07 12:03:38 DEBUG    About us page retrieved
+2021-08-07 12:03:38 INFO     127.0.0.1 - - [07/Aug/2021 12:03:38] "[37mGET /about HTTP/1.1[0m" 200 -
+2021-08-07 12:03:38 INFO     127.0.0.1 - - [07/Aug/2021 12:03:38] "[37mGET /static/css/main.css HTTP/1.1[0m" 200 -
+2021-08-07 12:03:39 INFO     127.0.0.1 - - [07/Aug/2021 12:03:39] "[37mGET /create HTTP/1.1[0m" 200 -
+2021-08-07 12:03:39 INFO     127.0.0.1 - - [07/Aug/2021 12:03:39] "[37mGET /static/css/main.css HTTP/1.1[0m" 200 -
+2021-08-07 12:03:44 DEBUG    Article "test" has been created
+2021-08-07 12:03:44 INFO     127.0.0.1 - - [07/Aug/2021 12:03:44] "[32mPOST /create HTTP/1.1[0m" 302 -
+2021-08-07 12:03:44 INFO     127.0.0.1 - - [07/Aug/2021 12:03:44] "[37mGET / HTTP/1.1[0m" 200 -
+2021-08-07 12:03:44 INFO     127.0.0.1 - - [07/Aug/2021 12:03:44] "[37mGET /static/css/main.css HTTP/1.1[0m" 200 -
+2021-08-07 12:03:46 DEBUG    Article "test" retrieved
+2021-08-07 12:03:46 INFO     127.0.0.1 - - [07/Aug/2021 12:03:46] "[37mGET /9 HTTP/1.1[0m" 200 -
+2021-08-07 12:03:46 INFO     127.0.0.1 - - [07/Aug/2021 12:03:46] "[37mGET /static/css/main.css HTTP/1.1[0m" 200 -
