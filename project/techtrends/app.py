@@ -1,5 +1,6 @@
 import logging
 import sqlite3
+import sys
 
 from datetime import datetime
 from flask import Flask, jsonify, json, render_template, request, url_for, redirect, flash
@@ -7,6 +8,18 @@ from werkzeug.exceptions import abort
 
 # Get the number of active db connections
 connection_count = 0
+
+# Logging
+logger = logging.getLogger("__name__")
+logging.basicConfig( level=logging.DEBUG,
+                     format='%(asctime)s %(levelname)-8s %(message)s',
+                     datefmt='%Y-%m-%d %H:%M:%S')
+h1 = logging.StreamHandler(sys.stdout)
+h1.setLevel(logging.DEBUG)
+h2 = logging.StreamHandler(sys.stderr)
+h2.setLevel(logging.ERROR)
+logger.addHandler(h1)
+logger.addHandler(h2)
 
 # Function to get a database connection.
 # This function connects to database with the name `database.db`
@@ -52,13 +65,6 @@ def index():
 # If the post ID is not found a 404 page is shown
 @app.route('/<int:post_id>')
 def post(post_id):
-    logging.basicConfig(
-            format='%(asctime)s %(levelname)-8s %(message)s',
-            filename='articles_log.log', 
-            encoding='UFT-8', 
-            level=logging.DEBUG, 
-            datefmt='%Y-%m-%d %H:%M:%S')
-
     post = get_post(post_id)
     if post is None:
         logging.error("Article with id " + str(post_id) + " does not exist")
@@ -70,13 +76,6 @@ def post(post_id):
 # Define the About Us page
 @app.route('/about')
 def about():
-    logging.basicConfig(
-            format='%(asctime)s %(levelname)-8s %(message)s',
-            filename='articles_log.log', 
-            encoding='UFT-8', 
-            level=logging.DEBUG, 
-            datefmt='%Y-%m-%d %H:%M:%S')
-
     logging.debug("About us page retrieved")
 
     return render_template('about.html')
@@ -99,13 +98,6 @@ def create():
             global connection_count
             connection_count += 1
 
-            logging.basicConfig(
-                format='%(asctime)s %(levelname)-8s %(message)s',
-                filename='articles_log.log', 
-                encoding='UFT-8', 
-                level=logging.DEBUG, 
-                datefmt='%Y-%m-%d %H:%M:%S')
-
             logging.debug("Article " + "\"" + title + "\"" + " has been created")
 
             return redirect(url_for('index'))
@@ -115,7 +107,6 @@ def create():
 # Define the Healthcheck endpoint
 @app.route('/healthz')
 def healthcheck():
-
     connection = get_db_connection()
     if connection is None:
         return app.response_class(

@@ -1,11 +1,43 @@
 ## Docker commands used to build the application 
-# TODO: insert the docker build command
+docker build -t techtrends .
+
+## List docker images
+docker images
 
 ## Docker commands used to run the application
-# TODO: insert the docker run command
+docker run -it -d -p 7111:3111 techtrends
+
+## List running docker containers
+docker -ps
 
 ## Docker commands used to get the application logs
-# TODO: insert the docker logs command
+docker logs 3af8dea06b9d
+(3af8dea06b9d is the container id retrieved from docker -ps)
 
 ## Logs from the container running the TechTrends application
-# TODO: paste logs from the Docker container 
+2021-08-07 20:15:09 INFO      * Running on http://0.0.0.0:3111/ (Press CTRL+C to quit)
+2021-08-07 20:15:15 ERROR    Article with id 30 does not exist
+2021-08-07 20:15:15 INFO     172.17.0.1 - - [07/Aug/2021 20:15:15] "GET /30 HTTP/1.1" 404 -
+2021-08-07 20:15:15 INFO     172.17.0.1 - - [07/Aug/2021 20:15:15] "GET /static/css/main.css HTTP/1.1" 200 -
+2021-08-07 20:15:19 INFO     172.17.0.1 - - [07/Aug/2021 20:15:19] "GET / HTTP/1.1" 200 -
+2021-08-07 20:15:19 INFO     172.17.0.1 - - [07/Aug/2021 20:15:19] "GET /static/css/main.css HTTP/1.1" 200 -
+2021-08-07 20:15:22 DEBUG    About us page retrieved
+2021-08-07 20:15:22 INFO     172.17.0.1 - - [07/Aug/2021 20:15:22] "GET /about HTTP/1.1" 200 -
+2021-08-07 20:15:22 INFO     172.17.0.1 - - [07/Aug/2021 20:15:22] "GET /static/css/main.css HTTP/1.1" 200 -
+2021-08-07 20:15:23 INFO     172.17.0.1 - - [07/Aug/2021 20:15:23] "GET / HTTP/1.1" 200 -
+2021-08-07 20:15:23 INFO     172.17.0.1 - - [07/Aug/2021 20:15:23] "GET /static/css/main.css HTTP/1.1" 200 -
+2021-08-07 20:15:24 INFO     172.17.0.1 - - [07/Aug/2021 20:15:24] "GET /create HTTP/1.1" 200 -
+2021-08-07 20:15:24 INFO     172.17.0.1 - - [07/Aug/2021 20:15:24] "GET /static/css/main.css HTTP/1.1" 200 -
+2021-08-07 20:15:29 DEBUG    Article "Test post" has been created
+2021-08-07 20:15:29 INFO     172.17.0.1 - - [07/Aug/2021 20:15:29] "POST /create HTTP/1.1" 302 -
+2021-08-07 20:15:29 INFO     172.17.0.1 - - [07/Aug/2021 20:15:29] "GET / HTTP/1.1" 200 -
+2021-08-07 20:15:29 INFO     172.17.0.1 - - [07/Aug/2021 20:15:29] "GET /static/css/main.css HTTP/1.1" 200 -
+2021-08-07 20:15:31 DEBUG    Article "Test post" retrieved
+2021-08-07 20:15:31 INFO     172.17.0.1 - - [07/Aug/2021 20:15:31] "GET /7 HTTP/1.1" 200 -
+2021-08-07 20:15:31 INFO     172.17.0.1 - - [07/Aug/2021 20:15:31] "GET /static/css/main.css HTTP/1.1" 200 -
+2021-08-07 20:16:57 INFO     172.17.0.1 - - [07/Aug/2021 20:16:57] "GET /healthz HTTP/1.1" 200 -
+2021-08-07 20:16:59 INFO     172.17.0.1 - - [07/Aug/2021 20:16:59] "GET /metrics HTTP/1.1" 200 -
+
+## Docker commands used to publish the application
+docker tag techtrends sjaindl/techtrends:v1.0.0
+docker push sjaindl/techtrends:v1.0.0
