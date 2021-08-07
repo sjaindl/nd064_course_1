@@ -13,7 +13,7 @@ def status():
         encoding='UFT-8', 
         level=logging.DEBUG, 
         datefmt='%Y-%m-%d %H:%M:%S')
-
+    
     logging.debug("status called: " + str(datetime.timestamp(datetime.now())))
 
     response = app.response_class(
