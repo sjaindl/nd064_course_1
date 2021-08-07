@@ -6,7 +6,7 @@ name: TechTrends - Package with Docker
 on: 
   push
     branches:
-        - 'main'
+        - main
 
 ## List the steps to be executed by the workflow
 jobs:
