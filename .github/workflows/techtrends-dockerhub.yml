@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      ## Use the public `checkout` actoin  in version v2  
+      ## Use the public `checkout` action  in version v2  
       ## to checkout the existing code in the repository
       -
         name: Checkout
