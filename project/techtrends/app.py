@@ -115,15 +115,33 @@ def create():
 # Define the Healthcheck endpoint
 @app.route('/healthz')
 def healthcheck():
-    response = app.response_class(
-            response=json.dumps({
-                    "result": "OK - healthy"
-                }),
-                status=200,
-                mimetype='application/json'
-    )
 
-    return response
+    connection = get_db_connection()
+    if connection is None:
+        return app.response_class(
+            response=json.dumps({
+                    "result": "ERROR - unhealthy"
+                }),
+                status=500,
+                mimetype='application/json'
+        )
+
+    if connection.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='posts';").fetchone() is None:
+        return app.response_class(
+            response=json.dumps({
+                    "result": "ERROR - unhealthy"
+                }),
+                status=500,
+                mimetype='application/json'
+        )
+
+    return app.response_class(
+        response=json.dumps({
+                "result": "OK - healthy"
+            }),
+            status=200,
+            mimetype='application/json'
+        )
 
 # Define the Healthcheck endpoint
 @app.route('/metrics')

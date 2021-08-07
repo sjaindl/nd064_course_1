@@ -62,3 +62,28 @@ ValueError: Unrecognised argument(s): encoding
 2021-08-07 12:03:46 DEBUG    Article "test" retrieved
 2021-08-07 12:03:46 INFO     127.0.0.1 - - [07/Aug/2021 12:03:46] "[37mGET /9 HTTP/1.1[0m" 200 -
 2021-08-07 12:03:46 INFO     127.0.0.1 - - [07/Aug/2021 12:03:46] "[37mGET /static/css/main.css HTTP/1.1[0m" 200 -
+2021-08-07 12:25:13 ERROR    Exception on /1 [GET]
+Traceback (most recent call last):
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/jaiste/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 55, in post
+    logging.basicConfig(
+  File "/Users/jaiste/anaconda3/lib/python3.8/logging/__init__.py", line 1997, in basicConfig
+    raise ValueError('Unrecognised argument(s): %s' % keys)
+ValueError: Unrecognised argument(s): encoding
+2021-08-07 12:25:13 INFO     127.0.0.1 - - [07/Aug/2021 12:25:13] "[35m[1mGET /1 HTTP/1.1[0m" 500 -
+2021-08-07 12:25:15 DEBUG    Article "2020 CNCF Annual Report" retrieved
+2021-08-07 12:25:15 INFO     127.0.0.1 - - [07/Aug/2021 12:25:15] "[37mGET /1 HTTP/1.1[0m" 200 -
+2021-08-07 12:25:15 INFO     127.0.0.1 - - [07/Aug/2021 12:25:15] "[37mGET /static/css/main.css HTTP/1.1[0m" 200 -
+2021-08-07 12:25:21 INFO     127.0.0.1 - - [07/Aug/2021 12:25:21] "[37mGET /healthz HTTP/1.1[0m" 200 -
+2021-08-07 12:25:53 INFO     127.0.0.1 - - [07/Aug/2021 12:25:53] "[35m[1mGET /healthz HTTP/1.1[0m" 500 -
